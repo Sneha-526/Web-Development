@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Making forms</title>
 </head>
+
 <body>
-    <label for="color">Color</label>
-    <select id="color" name="color">
-        <option value="orange">Orange</option>
-        <option value="pink">Pink</option>
-    </select>
-    <br>
-    <fieldset>
-        <legend>What is your favorite web technology</legend>
-        <label for="html">HTML</label>
-        <input type="radio" name="webfeature" value="html" id="html">
-        <label for="css">CSS</label>
-        <input type="radio" name="webfeature" value="css" id="css">
-    </fieldset>
-</br>
-    <label for="name">Name*</label>
-    <input autocomplete="given-name" size="2" type="text" required id="name" name="name" hidden>
-    </br>        
-    <label for="password">Password*</label>
-    <input type="password" > 
-    <button type="submit" onclick="thanku">submit</button>
+    <form>
+        <div>
+            <label for="color">Color</label>
+            <select id="color" name="color">
+                <option value="orange">Orange</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <fieldset>
+                <legend>What is your favorite web technology</legend>
+                <label for="html">HTML</label>
+                <input type="radio" name="webfeature" value="html" id="html">
+                <label for="css">CSS</label>
+                <input type="radio" name="webfeature" value="css" id="css">
+            </fieldset>
+        </div>
+        <br>
+        <div>
+            <label for="name">Name*</label>
+            <input autocomplete="given-name" type="text" required id="name" name="name">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password*</label>
+            <input type="password" required minlength="8" id="password" name="password">
+        </div>
+        <br>
+        <div>
+            <label for="animal">Animal</label>
+            <input type="text" pattern="[a-zA-Z]{2,20}" id="animal" name="animal">
+        </div>
+        <button type="submit" onclick="Thankyou">submit</button>
+    </form>
 </body>
 </html>
