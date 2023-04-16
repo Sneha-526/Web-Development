@@ -8,28 +8,28 @@ public class Any_base_subtraction {
         int n2 = scn.nextInt();
         int d = getDifference(b, n1, n2);
         System.out.println(d);
+        scn.close();
      }
     
-     public static int getDifference(int b, int n1, int n2){
+    public static int getDifference(int b, int n1, int n2){
         int ans = 0, borrow = 0, mul = 1;
-        while(n2>0 || n1>0){
-            int d2 = n2%10;
-            int d1 = n1%10;
-            int diff = d2 + borrow - d1;
+        while(n2>0){
+            int r1 = n1%10;
+            int r2 = n2%10;
+            n1 = n1/10;
+            n2 = n2/10;
+            int diff = r2 + borrow - r1;
             if(diff<0){
-                diff = diff+10;
-                borrow=0;
-
+                diff = diff + b;
+                borrow = -1;
             }
             else{
-                borrow=0;
-                
+                borrow = 0;
             }
-            ans = ans+diff*mul;
-            n1/=10;
-            n2/=10;
+            ans = ans + diff*mul;
+            mul = mul*10;
         }
         return ans;
-     }
+    }
      
 }
