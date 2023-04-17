@@ -22,13 +22,13 @@ public class difference_of_2_array {
         int k = ans.length-1;
         while(k>=0){
             int diff = 0;
-            int av = i>=0 ? a[i] : 0;
-            if(b[j] - a[i] +c >=0){
-                diff = b[j] - a[i] +c;
+            int av = i>=0?a[i]:0;
+            if(b[j] +c >= av){
+                diff = b[j] - av +c;
                 c=0;
             }
             else{
-                diff = b[j] + 10 - a[i] + c;
+                diff = b[j] + 10 - av + c;
                 c = -1;
             }
             ans[k] = diff;
@@ -38,15 +38,16 @@ public class difference_of_2_array {
         }
 
         int idx = 0;
-        while(idx < ans.length && ans[idx]==0){
-            idx++;
+        while(idx < ans.length){
+            if(ans[idx] == 0){
+                idx++;
+            }else{
+                break;
+            }
         }
         while(idx < ans.length){
-            System.out.print(ans[idx++] + " ");
-        }
-
-        for(int val:ans){
-            System.out.print(val + " ");
+            System.out.print(ans[idx] + " ");
+            idx++;
         }
         scn.close();
     }
