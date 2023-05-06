@@ -27,5 +27,7 @@ public class constructor1 {
         Derive d = new Derive(4,9);
         System.out.println();
         Derive a = new Derive();
+        System.out.println(d);
+        System.out.println(a);
     }
 }

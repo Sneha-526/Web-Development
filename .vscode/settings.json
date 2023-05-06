@@ -1,0 +1,27 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontSize": 18,
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.cursorBlinking": "smooth",
+    "githubPullRequests.remotes": [
+        "upstream"
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "git.suggestSmartCommit": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "redhat.telemetry.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.codeLens": false,
+    "audioCues.lineHasWarning": "auto",
+    "java.configuration.runtimes": [
+        
+
+    ],
+    "testing.automaticallyOpenPeekViewDuringAutoRun": true
+}
