@@ -25,7 +25,7 @@ public class Abstract{
         void markAttendance(){
             System.out.println(name + " is present");
         }
-        
+        abstract void doWork();
     }
 
     static class HREmployee extends Employee{
