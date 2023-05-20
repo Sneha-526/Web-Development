@@ -1,6 +1,6 @@
-package JAVA.Function_And_Array;
+package JAVA.two_D_Array;
 import java.util.*;
-public class state_of_wakanda{
+public class state_of_wakanda1{
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();

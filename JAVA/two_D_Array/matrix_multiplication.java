@@ -1,4 +1,4 @@
-package JAVA.Function_And_Array;
+package JAVA.two_D_Array;
 import java.util.Scanner;
 public class matrix_multiplication {
     public static void main(String[] args) {
