@@ -93,10 +93,10 @@ public class ring_rotate {
         r = r % oned.length;
         if(r<0){
             r = r + oned.length;
-            reverse(oned,0,oned.length-r-1);
-            reverse(oned,oned.length-r,oned.length-1);
-            reverse(oned,0,oned.length-1);
         }
+        reverse(oned,0,oned.length-r-1);
+        reverse(oned,oned.length-r,oned.length-1);
+        reverse(oned,0,oned.length-1);
     }
 
     public static void reverse(int[] oned, int li, int ri) {
