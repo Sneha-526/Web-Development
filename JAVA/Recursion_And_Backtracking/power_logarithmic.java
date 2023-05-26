@@ -1,23 +1,26 @@
 package JAVA.Recursion_And_Backtracking;
 import java.util.*;
-public class power_linear {
+public class power_logarithmic {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int x = scn.nextInt();
         int n = scn.nextInt();
-        int p = powerLinear(x,n);
-        System.out.println(p    );
+        int ans = power(x,n);
+        System.out.println(ans);
+        
         scn.close();
     }
 
-    public static int powerLinear(int x, int n) {
+    public static int power(int x, int n) {
         if(n==0){
             return 1;
         }
+        int recans = power(x,n/2);
+        int ans = recans * recans;
+        if(n%2 == 1){
+            ans = ans * x;
+        }
 
-        int p1 = powerLinear(x,n-1);
-        int p = p1 * x;
-        return p;
+        return ans;
     }
-    
 }

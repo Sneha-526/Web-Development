@@ -1,20 +1,21 @@
 package JAVA.Recursion_And_Backtracking;
 import java.util.*;
-public class factorial {
+public class print_zig_zag{
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int f = fact(n);
-        System.out.println(f);
+        pzz(n);
         scn.close();
     }
-
-    public static int fact(int n){
+    public static void pzz(int n){
         if(n==0){
-            return 1;
+            return;
         }
-        int f1 = fact(n-1);
-        int f = f1 * n;
-        return f;
+        System.out.println(n);
+        pzz(n-1);
+        System.out.println(n);
+        pzz(n-1);
+        System.out.println(n);
+
     }
 }
