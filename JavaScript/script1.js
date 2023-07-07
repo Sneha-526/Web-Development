@@ -23,3 +23,43 @@ console.log(`String with
 multiple
 lines`);
 
+// Type Conversion -->
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Sneha'));
+console.log(typeof NaN);
+
+// Type Coercion -->
+console.log("I'am " + 19 + " years old."); // converting number 19 to string implicitally.
+console.log('23' - '10' - 3); // converting string to number implicitally.
+console.log('23' + '10' + 3); // converting number to string implicitally.
+
+let n = '1' + 1; // '11'
+n = n - 1; // '10'
+console.log(n);
+
+// Truthy and Falsy Values -->
+let money = 0;
+if(money){
+    console.log("Don't spend it all :)");
+}
+else{
+    console.log("You should get a job");
+}
+
+let height = 0;
+if(height){
+    console.log("Height is dedfined");
+}
+else{
+    console.log("Height is undefined");
+}
+const age = 18;
+if(age === 18) console.log("strict equality");
+if(age == 18) console.log("loose equality");
+
+const favourite = prompt("What is your favourie number");
+console.log(favourite);

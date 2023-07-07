@@ -40,3 +40,22 @@ console.log(description);
 //Lecture 5 --> Q1.
 description = `${country} is in ${continent}, and its ${population} million people speaks ${language}.`;
 console.log(description);
+
+//Lecture 6 --> Q1 & Q2.
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2);
+
+//Lecture 7 --> Q1.
+let numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
+if(numNeighbours === 1){
+    console.log("only one border");
+}
+else if(numNeighbours>1){
+    console.log("More than one border");
+}
+else{
+    console.log("No Borders");
+}
