@@ -22,40 +22,72 @@ language = "Hindi";
 //Q3. --> trying to change values of const variables.
 // continent = "Europe"
 
-//Lecture 4 --> Q1.
-// population /= 2;
-//Q2.
-population++;
-console.log(population);
-//Q3.
-let populationFinland = 6;
-console.log(population>populationFinland);
-//Q4.
-let avgPopulation = 33;
-console.log(avgPopulation>population);
-//Q5.
-let description = country + " is in " + continent + ", and its " + population + " million people speaks " + language;
-console.log(description);
+// //Lecture 4 --> Q1.
+// // population /= 2;
+// //Q2.
+// population++;
+// console.log(population);
+// //Q3.
+// let populationFinland = 6;
+// console.log(population>populationFinland);
+// //Q4.
+// let avgPopulation = 33;
+// console.log(avgPopulation>population);
+// //Q5.
+// let description = country + " is in " + continent + ", and its " + population + " million people speaks " + language;
+// console.log(description);
 
-//Lecture 5 --> Q1.
-description = `${country} is in ${continent}, and its ${population} million people speaks ${language}.`;
-console.log(description);
+// //Lecture 5 --> Q1.
+// description = `${country} is in ${continent}, and its ${population} million people speaks ${language}.`;
+// console.log(description);
 
-//Lecture 6 --> Q1 & Q2.
-console.log('9' - '5');
-console.log('19' - '13' + '17');
-console.log('19' - '13' + 17);
-console.log('123' < 57);
-console.log(5 + 6 + '4' + 9 - 4 - 2);
+// //Lecture 6 --> Q1 & Q2.
+// console.log('9' - '5');
+// console.log('19' - '13' + '17');
+// console.log('19' - '13' + 17);
+// console.log('123' < 57);
+// console.log(5 + 6 + '4' + 9 - 4 - 2);
 
-//Lecture 7 --> Q1.
-let numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
-if(numNeighbours === 1){
-    console.log("only one border");
-}
-else if(numNeighbours>1){
-    console.log("More than one border");
-}
-else{
-    console.log("No Borders");
+// //Lecture 7 --> Q1.
+// let numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
+// if(numNeighbours === 1){
+//     console.log("only one border");
+// }
+// else if(numNeighbours>1){
+//     console.log("More than one border");
+// }
+// else{
+//     console.log("No Borders");
+// }
+
+// //Lecture 8 --> Q1
+// if(language === "English" && population < 50){
+//     console.log(`You should live in ${country} :)`);
+// }
+// else{
+//     console.log(`${country} does not meet your criteria :(`);
+// }
+
+//Lecture 9 --> Q1.
+switch(language){
+    case 'chinese':
+        console.log("MOST number of native speakers");
+        break;
+    case 'mandarin':
+        console.log("MOST number of native speakers");
+        break;
+    case 'spanish':
+        console.log("2nd place in number of native speakers");
+        break;
+    case 'english':
+        console.log("3rd palce");
+        break;
+    case 'Hindi':
+        console.log("Number 4");
+        break;
+    case 'arabic':
+        console.log("5th most spoken language");
+        break;
+    default:
+        console.log("Great language too :D");
 }
