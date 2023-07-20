@@ -6,7 +6,12 @@
     <title>Form</title>
   </head>
   <body>
-    <form>
+    <form
+      name="myForm"
+      onsubmit="return myFunction()"
+      method="post"
+      style="font-size: x-large"
+    >
       <div
         style="
           display: flex;
@@ -18,8 +23,8 @@
           border-radius: 20%;
         "
       >
-        <label for="name">Name &nbsp;</label>
-        <input type="text" />
+        <label>Name &nbsp;</label>
+        <input type="text" name="name" required />
       </div>
 
       <div
@@ -32,8 +37,8 @@
           margin-bottom: 1%;
         "
       >
-        <label for="email">Email &nbsp;</label>
-        <input type="email" />
+        <label>Email &nbsp;</label>
+        <input type="email" name="email" required />
       </div>
 
       <div
@@ -46,8 +51,8 @@
           margin-bottom: 1%;
         "
       >
-        <label for="number">Phone No. &nbsp;</label>
-        <input type="number" />
+        <label>Phone No. &nbsp;</label>
+        <input type="number" name="number" required />
       </div>
 
       <div
@@ -61,25 +66,25 @@
         <div style="padding: 20px; font-size: 30px; text-align: center">
           <label for="msg1">Message 1</label>
           <br />
-          <textarea name="myText" cols="30" rows="10"></textarea>
+          <textarea name="myText" cols="30" rows="10" id="msg1"></textarea>
         </div>
 
         <div style="padding: 20px; font-size: 30px; text-align: center">
           <label for="msg2">Message 2</label>
           <br />
-          <textarea name="myText" cols="30" rows="10"></textarea>
+          <textarea name="myText" cols="30" rows="10" id="msg2"></textarea>
         </div>
 
         <div style="padding: 20px; font-size: 30px; text-align: center">
           <label for="msg3">Message 3</label>
           <br />
-          <textarea name="myText" cols="30" rows="10"></textarea>
+          <textarea name="myText" cols="30" rows="10" id="msg3"></textarea>
         </div>
 
         <div style="padding: 20px; font-size: 30px; text-align: center">
           <label for="msg4">Message 4</label>
           <br />
-          <textarea name="myText" cols="30" rows="10"></textarea>
+          <textarea name="myText" cols="30" rows="10" id="msg4"></textarea>
         </div>
       </div>
 
@@ -91,10 +96,15 @@
           padding-bottom: 1%;
           margin-top: 1%;
           margin-bottom: 1%;
+          font-size: x-large;
+          border-radius: 20%;
         "
       >
-        <button type="submit" onclick="Thankyou">Submit</button>
+        <button name="submit" type="submit" onClick="myFunction()">
+          Submit
+        </button>
       </div>
     </form>
+    <script src="form_script.js"></script>
   </body>
 </html>
