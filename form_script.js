@@ -9,18 +9,19 @@ function myFunction() {
   var msg4 = document.forms["myForm"]["msg4"].value;
 
   if (myName == "" && Email == "" && PhoneNo == "") {
-    document.write(`Please Fill your all details`);
+    alert(`Please Fill your all details`);
     return false;
-  } else {
-    if (Email == "") {
-      document.write(`Please enter your Email`);
-    }
-    if (myName == "") {
-      document.write(`Please enter your Name`);
-    }
-    if (PhoneNo == "") {
-      document.write(`Please enter your Phone No.`);
-    }
+  }
+  if (Email == "") {
+    alert(`Please enter your Email`);
+    return false;
+  }
+  if (myName == "") {
+    alert(`Please enter your Name`);
+    return false;
+  }
+  if (PhoneNo == "") {
+    alert(`Please enter your Phone No.`);
     return false;
   }
 
