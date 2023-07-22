@@ -36,11 +36,11 @@ Challenge #2
     BMI (28.3) is higher than John's (23.9)!"
  */
 
-    if(BMIMark > BMIJohn){
-        console.log(`Mark's BMI (${BMIMark}) is higher than John's(${BMIJohn})!`);
-    }else{
-        console.log(`John's BMI (${BMIJohn}) is higher than Mark's(${BMIMark})!`);
-    }
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's(${BMIJohn})!`);
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's(${BMIMark})!`);
+}
 
 /* 
 Challenge #3
@@ -79,8 +79,12 @@ Challenge #4
 */
 
 const bill = 430;
-const tip = bill <=300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(
+    `The bill was ${bill}, the tip was ${tip}, and the total value is ${
+        bill + tip
+    }`
+);
 
 /*
 Coding Challenge #1
@@ -99,26 +103,24 @@ Coding Challenge #1
     Data 2
     5. Ignore draws this time
 */
-const calcAverage = (a,b,c) => (a + b + c) / 3;
-const scoreDolphins = calcAverage(44,23,71);
-const scoreKoalas = calcAverage(65,54,49);
-console.log(scoreDolphins,scoreKoalas);
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+const scoreDolphins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
 
-const checkWinner = function(avgDolphins,avgKoalas){
-    if(avgDolphins >= 2 * avgKoalas){
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
         console.log(`Dolphin win (${avgDolphins} vs. ${avgKoalas})`);
-    }
-    else if(avgKoalas >= 2 * avgDolphins){
+    } else if (avgKoalas >= 2 * avgDolphins) {
         console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log(`No team wins...`);
     }
-    else{
-        console.log(`No team wins...`)
-    }
-}
+};
 
 checkWinner(scoreDolphins, scoreKoalas);
 
-checkWinner(576,111);
+checkWinner(576, 111);
 
 /*
 Coding Challenge #2
@@ -130,11 +132,34 @@ Coding Challenge #2
     4. Bonus: Create an array 'total' containing the total values, so the bill + tip
 */
 
-const calcTip = function(bill){
+const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+};
 
 const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills, tips, totals);
+
+/*
+    Given an array of forecasted maximum temperatures, the thermometer displays a
+    string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+    Your tasks:
+
+    1. Create a function 'printForecast' which takes in an array 'arr' and logs a
+    string like the above to the console. Try it with both test datasets.
+    2. Use the problem-solving framework: Understand the problem and break it up
+    into sub-problems!
+*/
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+const printForecast = function (arr) {
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+        str = str + `${arr[i]} C in ${i + 1} days...`;
+    }
+    console.log('...' + str);
+};
+
+printForecast(data1);
+printForecast(data2);
