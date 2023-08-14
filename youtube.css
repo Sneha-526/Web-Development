@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.material-icons {
+    color: rgb(49, 45, 45);
+    cursor: pointer;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+}
+.headerLeft {
+    display: flex;
+    align-items: center;
+}
+.headerLeft img {
+    width: 100px;
+    margin-left: 15px;
+}
+.headerIcons {
+    padding: 0px 7px;
+}
+.headerSearch form {
+    border: 1px solid #ddd;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.headerSearch input {
+    width: 500px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+}
